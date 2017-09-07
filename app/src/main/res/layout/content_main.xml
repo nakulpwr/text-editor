@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.nakul.texteditor.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <com.nakul.texteditor.RichEditText
+        android:id="@+id/rich_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rich_text_actions" />
+
+    <TextView
+        android:id="@+id/wordsCountTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rich_text_actions"
+        android:layout_alignEnd="@+id/rich_text_actions"
+        android:layout_alignRight="@+id/rich_text_actions"
+        android:layout_margin="5dp"
+        android:background="#38000000"
+        android:padding="5dp"
+        android:text="0"
+        android:textColor="@color/white" />
+
+    <com.nakul.texteditor.RichTextActions
+        android:id="@+id/rich_text_actions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
